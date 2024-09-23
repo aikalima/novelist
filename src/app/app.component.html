@@ -1,0 +1,57 @@
+<!-- app.component.html -->
+<div class="drawer" [class.open]="drawerOpen">
+  <div class="drawer-content">
+    <label for="story-title">Title</label>
+    <input id="story-title" type="text" [(ngModel)]="title" (ngModelChange)="saveToLocalStorage()">
+
+    <label for="story-protagonist">Protagonist</label>
+    <textarea id="story-protagonist" rows="10" [(ngModel)]="protagonist" (ngModelChange)="saveToLocalStorage()"></textarea>
+
+    <label for="story-outline">Outline</label>
+    <textarea id="story-outline" rows="20" [(ngModel)]="outline" (ngModelChange)="saveToLocalStorage()"></textarea>
+  </div>
+</div>
+
+<!-- Button to open the drawer -->
+<button class="drawer-toggle" (click)="toggleDrawer()">Story Outline</button>
+
+<div class="menu-container">
+  <div class="hamburger-menu" (click)="toggleMenu()">&#9776;</div>
+  <div *ngIf="menuOpen" class="menu-dropdown">
+    <button (click)="openFile()">
+      <span class="material-icons">folder_open</span>
+      Open
+    </button>
+    <button (click)="saveFile()">
+      <span class="material-icons">save</span>
+      Save
+    </button>
+    <button (click)="openHelpPopup()">
+      <span class="material-icons">help_outline</span>
+      Help
+    </button>
+  </div>
+</div>
+
+<!-- Help Popup Modal -->
+<div class="help-modal" *ngIf="showHelpPopup">
+  <div class="help-modal-content">
+    <h2>The Novelist</h2>
+    <p>Overcome your writer's block.</p>
+    <ul>
+      <li><strong>Get Started:</strong> Fill in your story details, then begin writing.</li>
+      <li><strong>Need inspiration?</strong> Press <strong>TAB</strong> at any point to have the Novelist continue your sentence or generate the next part of the story.</li>
+      <li>Use <strong>Control + G</strong> to set the exact number of words you'd like the Novelist to generate.</li>
+    </ul>
+     <!-- Access Code Input -->
+    <div class="access-code-section">
+      <label for="access-code">Enter Access Code:</label>
+      <input id="access-code" [(ngModel)]="accessCode" type="text" />
+    </div>
+
+    <button (click)="submitAccessCode()">Submit</button>
+    <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
+  </div>
+</div>
+
+<app-story-editor #storyEditor></app-story-editor>

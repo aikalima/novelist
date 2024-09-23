@@ -1,0 +1,191 @@
+/* app.component.css */
+/* Drawer styles */
+/* Drawer styles */
+.drawer {
+  position: fixed;
+  right: -400px; /* Completely off-screen when closed */
+  top: 0;
+  width: 300px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  transition: right 0.3s ease; /* Smooth sliding */
+  z-index: 1000;
+}
+
+.drawer-content textarea, .drawer-content input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px; /* Same font size as the editor */
+  font-family: 'Courier', monospace; /* Same font family as the editor */ 
+}
+
+.drawer.open {
+  right: 0; /* Drawer slides into view when open */
+}
+
+.drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.drawer-content {
+  margin-top: 20px;
+  margin-right: 12px;
+}
+
+.drawer-content label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.drawer-content input, .drawer-content textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  margin-right: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-align: justify;
+}
+
+.drawer-toggle {
+  display: flex;
+  align-items: center;
+  background-color: #d0d0d8; /* Light neutral gray */
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  color: #333; /* Darker gray for the text */
+  padding: 8px;
+  position: fixed;
+  right: 10px;
+  top: 20px;
+  z-index: 1001;
+  border-radius: 5px;
+}
+
+.drawer-toggle:hover {
+  background-color: #c0b7b7; /* Slightly darker gray on hover */
+}
+
+.drawer-toggle .material-icons {
+  margin-right: 8px;
+  font-size: 20px;
+  color: #555; /* Medium gray for the icon */
+}
+
+.menu-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  
+  .hamburger-menu {
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  .menu-dropdown {
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+  }
+  
+  .menu-dropdown button {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+  }
+  
+  .menu-dropdown button .material-icons {
+    margin-right: 8px;
+    font-size: 20px;
+    color: #555;
+  }
+  
+  .menu-dropdown button:hover {
+    background-color: #f0f0f0;
+  }
+
+  /* Modal for Help */
+.help-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.help-modal-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 400px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.help-modal-content h2 {
+  margin-bottom: 20px;
+}
+
+.help-modal-content ul {
+  text-align: left;
+}
+
+.help-modal-content button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #d0d0d8;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.help-modal-content button:hover {
+  background-color: #c0b7b7;
+}
+
+.help-modal-content ul li {
+  margin-bottom: 8px;
+}
+
+.access-code-section {
+  margin-top: 20px;
+}
+
+.access-code-section input {
+  padding: 8px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+}

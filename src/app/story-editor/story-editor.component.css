@@ -1,0 +1,52 @@
+/* Global box-sizing reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  .editor-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  
+  .editor {
+    width: 84ch;
+    max-width: 84ch;
+    padding: 5ch 10ch;
+    margin: 0 auto 20px auto;
+    border: 1px solid #ddd;
+    background-color: #f9f8f8;
+    font-size: 18px;
+    font-family: Courier, monospace;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-align: justify; /* Ensure text is justified */
+    overflow-y: auto;
+    outline: none;
+    cursor: text;
+    box-sizing: border-box;
+    hyphens: auto;
+  }
+  
+  .editor:focus {
+    border-color: #aaa;
+    outline: none;
+  }
+  
+  .editor p {
+    margin: 0 0 1em 0; /* Add spacing between paragraphs */
+  }
+
+  .editor::selection {
+    background-color: rgba(173, 216, 230, 0.3);
+  }
+  
+  /* Style for page numbers */
+  .page-number {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 16px;
+    color: #555;
+  }
