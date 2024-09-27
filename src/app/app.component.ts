@@ -50,6 +50,10 @@ export class AppComponent {
     return null;
   }
 
+  closeModal() {
+    this.showHelpPopup = false;
+  }
+  
   ngOnInit() {
     this.loadFromLocalStorage();
     this.checkIfHelpShown();
