@@ -43,14 +43,15 @@
       <li><strong>Need inspiration?</strong> Press <strong>TAB</strong> at any point to have the Novelist continue your sentence or generate the next part of the story.</li>
       <li>Use <strong>Control + G</strong> to set the exact number of words you'd like the Novelist to generate.</li>
     </ul>
+    <button (click)="closeModal()">OK</button>
      <!-- Access Code Input -->
-    <!-- <div class="access-code-section">
+    <div class="access-code-section">
       <label for="access-code">Enter Access Code:</label>
       <input id="access-code" [(ngModel)]="accessCode" type="text" />
     </div>
 
     <button (click)="submitAccessCode()">Submit</button>
-    <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p> -->
+    <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
   </div>
 </div>
 
